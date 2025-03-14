@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="https://i.pinimg.com/236x/a4/2c/7d/a42c7d6c8847ae3f94c98442ce8f3536.jpg" alt="Foto de Pedro" class="foto-perfil"> Pedro
+            </div>
+            <ul class="nav-links">
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h2 class="buceta">Meus Projetos</h2>
+    <section id="projetos">
+
+        <div class="projeto">
+            <img src="https://i.pinimg.com/736x/05/09/3a/05093a1d67b7e21e19a84e066aa7c51c.jpg" alt="">
+            <h3>Tinto & Branco</h3>
+            <p>Tinto & Branco foi um projeto de uma vinicola simples e sofisticado.</p>
+            <br>
+            <a href="https://github.com/Latensa/Tinto-Branco-final" target="_blank" class="btn">Ver Projeto</a>
+        </div>
+        <div class="projeto">
+            <img src="https://i.pinimg.com/236x/8b/b4/f5/8bb4f5da9ad877d8f15d2db40ba6fb75.jpg" alt="">
+            <h3>Clínica Feminina</h3>
+            <p>Site de uma clinica de estetica feminina com banco de dados integrado.</p>
+            <a href="https://github.com/Latensa/Clinica_full." target="_blank" class="btn">Ver Projeto</a>
+        </div>
+        <div class="projeto">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcHcPKhp5sDGj1WwEbf_jIuS9ed7ITX2kFEQ&s" alt="">
+            <h3>Formulario corrida</h3>
+            <p>Um formulario de incrição.</p>
+            <br>
+            <a href="https://latensa.github.io/correria-port/" target="_blank" class="btn">Ver Projeto</a>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2 class="buceta">Contato</h2>
+        <form>
+            <input type="text" placeholder="Nome" required>
+            <input type="email" placeholder="Email" required>
+            <textarea placeholder="Mensagem" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        let i = 0;
+        const text = "Olá, sou Pedro";
+        const speed = 100;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typing").textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
+        }
+        document.getElementById("typing").textContent = "";
+        typeWriter();
+    });
+</script>
